@@ -1,49 +1,35 @@
-// 1. COMPTE À REBOURS
-const weddingDate = new Date("April 25, 2026 08:30:00").getTime();
-setInterval(function() {
-    const now = new Date().getTime();
-    const distance = weddingDate - now;
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    const timer = document.getElementById("countdown-timer");
-    if (timer) timer.innerHTML = `${days}j ${hours}h ${minutes}m ${seconds}s`;
-}, 1000);
-
-// 2. DIAPORAMA
-let currentSlide = 0;
-function playSlideshow() {
+// 1. DIAPORAMA
+let slideIndex = 0;
+function moveSlides() {
     const slides = document.querySelectorAll('.slideshow-image');
-    if (slides.length === 0) return;
-    slides[currentSlide].classList.remove('active');
-    currentSlide = (currentSlide + 1) % slides.length;
-    slides[currentSlide].classList.add('active');
+    if (slides.length > 0) {
+        slides[slideIndex].classList.remove('active');
+        slideIndex = (slideIndex + 1) % slides.length;
+        slides[slideIndex].classList.add('active');
+    }
 }
-setInterval(playSlideshow, 5000);
+setInterval(moveSlides, 5000);
 
-// 3. OUVERTURE / FERMETURE RÉSERVATION
-const rsvpBtn = document.getElementById('show-rsvp-button');
-const rsvpModal = document.getElementById('rsvp-modal');
-const closeBtn = document.querySelector('.close-button');
+// 2. RÉSERVATION (MODALE)
+const modal = document.getElementById('rsvp-modal');
+const btn = document.getElementById('show-rsvp-button');
+const span = document.querySelector('.close-button');
 
-if (rsvpBtn) {
-    rsvpBtn.onclick = function(e) {
+if (btn) {
+    btn.onclick = function(e) {
         e.preventDefault();
-        rsvpModal.style.display = 'block';
+        modal.style.display = "block";
     }
 }
 
-if (closeBtn) {
-    closeBtn.onclick = function() {
-        rsvpModal.style.display = 'none';
+if (span) {
+    span.onclick = function() {
+        modal.style.display = "none";
     }
 }
 
-// Ferme si on clique en dehors du formulaire
-window.onclick = function(e) {
-    if (e.target == rsvpModal) {
-        rsvpModal.style.display = 'none';
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
     }
 }
