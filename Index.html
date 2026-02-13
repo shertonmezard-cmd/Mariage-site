@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notre Mariage - Shebnah & Sherton</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="navbar">
+        <div class="logo-container">
+            <img src="images/logo-mariage.png" alt="Logo de notre mariage" class="logo">
+        </div>
+        <nav>
+            <a href="images/photos-du-jour/index.html" class="nav-button">Photos du jour</a>
+            <a href="#" id="show-rsvp-button" class="nav-button">Réservez votre place</a>
+        </nav>
+    </header>
+
+    <div id="slideshow-container">
+        <div class="slideshow-text">
+            <h1>Shebnah & Sherton marriage !!!</h1>
+            <p>Rejoignez-nous pour célébrer notre amour.</p>
+        </div>
+    </div>
+
+    <section id="info-video">
+        <h2>Informations importantes</h2>
+        <p>Regardez notre vidéo pour tous les détails du mariage.</p>
+        <div class="video-container" style="width: 100%; max-width: 800px; margin: 20px auto; text-align: center;">
+            <iframe 
+                src="https://drive.google.com/file/d/1pJvQa77o2oCk2ML3Ay4muCSNNWQfSkWg/preview" 
+                width="100%" 
+                height="480" 
+                allow="autoplay" 
+                style="border:none; border-radius: 15px; box-shadow: 0px 4px 15px rgba(0,0,0,0.2);">
+            </iframe>
+        </div>
+    </section>
+<section id="plan">
+    <h2>Lieu de la Cérémonie</h2>
+    <p>Pour vous guider jusqu'à nous, voici l'emplacement exact :</p>
+    
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3781.772155515107!2d-72.24879792482176!3d18.584308067224352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDM1JzAzLjUiTiA3MsKwMTQnNDYuNCJX!5e0!3m2!1sen!2sht!4v1770929284504!5m2!1sen!2sht" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div class="map-actions">
+        <a href="https://www.google.com/maps/search/?api=1&query=Google" target="_blank" class="nav-button">Ouvrir dans l'application Maps</a>
+    </div>
+</section>
+
+    <section id="program">
+        <h2>Programme de la journée</h2>
+        <ul>
+            <li>09h00 à 12h00 : Cérémonie du mariage à l'eglise</li>
+            <li>12h00 à 18h00 : Cocktail, danse et photos</li>
+            
+        </ul>
+    </section>
+
+    <section id="photos">
+        <h2>Nos souvenirs</h2>
+        <div class="photo-gallery">
+            <div class="photo-item photo-item-large" data-full="images/photo1.jpg"><img src="images/photo1.jpg" alt="Photo 1"></div>
+            <div class="photo-item" data-full="images/photo2.jpg"><img src="images/photo2.jpg" alt="Photo 2"></div>
+            <div class="photo-item" data-full="images/photo3.jpg"><img src="images/photo3.jpg" alt="Photo 3"></div>
+            <div class="photo-item photo-item-wide" data-full="images/photo4.jpg"><img src="images/photo4.jpg" alt="Photo 4"></div>
+            <div class="photo-item" data-full="images/photo5.jpg"><img src="images/photo5.jpg" alt="Photo 5"></div>
+            <div class="photo-item" data-full="images/photo6.jpg"><img src="images/photo6.jpg" alt="Photo 6"></div>
+            <div class="photo-item" data-full="images/photo7.jpg"><img src="images/photo7.jpg" alt="Photo 7"></div>
+            <div class="photo-item photo-item-tall" data-full="images/photo8.jpg"><img src="images/photo8.jpg" alt="Photo 8"></div>
+            <div class="photo-item" data-full="images/photo9.jpg"><img src="images/photo9.jpg" alt="Photo 9"></div>
+            <div class="photo-item photo-item-wide" data-full="images/photo10.jpg"><img src="images/photo10.jpg" alt="Photo 10"></div>
+        </div>
+    </section>
+    
+    <section id="rsvp-modal">
+        <div class="rsvp-content">
+            <span class="close-button">&times;</span>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeJ_KMme99jiIi6VNgSltC-k2VDhNyR_EiYe7MuDjz3Sim7Ew/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
+        </div>
+    </section>
+
+    <section id="live-stream">
+        <h2>Diffusion en direct de la cérémonie</h2>
+        <div id="live-stream-container">
+            </div>
+    </section>
+
+    <footer>
+        <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+            <img src="images/Animation.gif" alt="Animation" class="footer-icon" style="height: 50px;">
+            <div id="countdown-timer"></div>
+        </div>
+        <p>&copy; 2026 Notre Mariage</p>
+    </footer>
+
+    <div id="image-modal" class="modal">
+        <span class="close-modal-button">&times;</span>
+        <img class="modal-content" id="modal-image">
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
