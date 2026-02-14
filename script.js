@@ -21,38 +21,27 @@ const countdownFunction = setInterval(function() {
     }
 }, 1000);
 
-
-// Code pour le diaporama (carrousel)
-const slideshowImages = [
-    'images/photo-slideshow1.jpg',
-    'images/photo-slideshow2.jpg',
-    'images/photo-slideshow3.jpg',
-	'images/photo-slideshow4.jpg'
-];
-
+// --- Code pour le diaporama corrigé ---
 let currentImageIndex = 0;
-const slideshowContainer = document.getElementById('slideshow-container');
-
-function startSlideshow() {
-    slideshowImages.forEach((imageSrc, index) => {
-        const img = document.createElement('img');
-        img.src = imageSrc;
-        img.classList.add('slideshow-image');
-        if (index === 0) {
-            img.classList.add('active');
-        }
-        slideshowContainer.appendChild(img);
-    });
-
-    setInterval(nextImage, 10000);
-}
 
 function nextImage() {
     const images = document.querySelectorAll('.slideshow-image');
+    
+    // Si aucune image n'est trouvée, on arrête pour éviter les erreurs
+    if (images.length === 0) return;
+
+    // On retire la classe active de l'image actuelle
     images[currentImageIndex].classList.remove('active');
-    currentImageIndex = (currentImageIndex + 1) % slideshowImages.length;
+
+    // On calcule l'index de la suivante
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+
+    // On ajoute la classe active à la nouvelle image
     images[currentImageIndex].classList.add('active');
 }
+
+// On lance le cycle toutes les 5 secondes (5000ms) pour que ce soit plus dynamique
+setInterval(nextImage, 5000);
 
 
 // Code pour le formulaire pop-up
@@ -102,3 +91,4 @@ window.addEventListener('click', function(event) {
 
 
 document.addEventListener('DOMContentLoaded', startSlideshow);
+
