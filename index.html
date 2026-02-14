@@ -20,29 +20,69 @@
     </header>
 
     <div id="slideshow-container">
-        <img src="images/photo-slideshow1.jpg" class="slideshow-image active">
-        <img src="images/photo-slideshow2.jpg" class="slideshow-image">
-        <img src="images/photo-slideshow3.jpg" class="slideshow-image">
-        <img src="images/photo-slideshow4.jpg" class="slideshow-image">
-        <img src="images/photo-slideshow5.jpg" class="slideshow-image">
-        
-        <div class="slideshow-text">
-            <h1>Sherton & Shebnah marriage !!!</h1>
-            <p>Rejoignez-nous pour célébrer notre amour.</p>
-        </div>
+    <img src="images/photo-slideshow1.jpg" class="slideshow-image active">
+    <img src="images/photo-slideshow2.jpg" class="slideshow-image">
+    <img src="images/photo-slideshow3.jpg" class="slideshow-image">
+    <img src="images/photo-slideshow4.jpg" class="slideshow-image">
+    <img src="images/photo-slideshow5.jpg" class="slideshow-image">
+    
+    <div class="slideshow-text">
+        <h1>Sherton & Shebnah marriage !!!</h1>
+        <p>Rejoignez-nous pour célébrer notre amour.</p>
     </div>
+</div>
+
+    <section id="info-video">
+        <h2>Informations importantes</h2>
+        <p>Regardez notre vidéo pour tous les détails du mariage.</p>
+        <div class="video-container" style="width: 100%; max-width: 800px; margin: 20px auto; text-align: center;">
+            <iframe 
+                src="https://drive.google.com/file/d/1pJvQa77o2oCk2ML3Ay4muCSNNWQfSkWg/preview" 
+                width="100%" height="480" allow="autoplay" 
+                style="border:none; border-radius: 15px; box-shadow: 0px 4px 15px rgba(0,0,0,0.2);">
+            </iframe>
+        </div>
+    </section>
+
+    <section id="plan">
+        <h2>Lieu de la Cérémonie</h2>
+        <p>Nous vous attendons à : <strong>Marassa 14, Impasse Romain</strong></p>
+        
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.446543054174!2d-72.2471!3d18.5752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eb9e6f888f8d5f7%3A0x1d2c65f577e1df13!2sMarassa%2C%20Haiti!5e0!3m2!1sfr!2sfr!4v1700000000000" 
+                width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+
+        <div class="map-actions">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Marassa+14+Impasse+Romain+Haiti" 
+               target="_blank" class="nav-button" 
+               style="background-color: #ffd700; color: #333; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; display: inline-block; margin-top: 10px;">
+               📍 Ouvrir dans Google Maps
+            </a>
+        </div>
+    </section>
+
+    <section id="program">
+        <h2>Programme de la journée</h2>
+        <ul>
+            <li>09h00 à 12h00 : Cérémonie du mariage à l'eglise</li>
+            <li>12h00 à 18h00 : Cocktail, danse et photos</li>
+        </ul>
+    </section>
 
     <section id="photos">
-        <h2>Photos du jour</h2>
+        <h2>Nos souvenirs</h2>
         <div class="photo-gallery">
-            <div class="photo-item" data-full="images/photo1.jpg"><img src="images/photo1.jpg" alt="Photo 1"></div>
+            <div class="photo-item photo-item-large" data-full="images/photo1.jpg"><img src="images/photo1.jpg" alt="Photo 1"></div>
             <div class="photo-item" data-full="images/photo2.jpg"><img src="images/photo2.jpg" alt="Photo 2"></div>
             <div class="photo-item" data-full="images/photo3.jpg"><img src="images/photo3.jpg" alt="Photo 3"></div>
-            <div class="photo-item" data-full="images/photo4.jpg"><img src="images/photo4.jpg" alt="Photo 4"></div>
+            <div class="photo-item photo-item-wide" data-full="images/photo4.jpg"><img src="images/photo4.jpg" alt="Photo 4"></div>
             <div class="photo-item" data-full="images/photo5.jpg"><img src="images/photo5.jpg" alt="Photo 5"></div>
             <div class="photo-item" data-full="images/photo6.jpg"><img src="images/photo6.jpg" alt="Photo 6"></div>
             <div class="photo-item" data-full="images/photo7.jpg"><img src="images/photo7.jpg" alt="Photo 7"></div>
-            <div class="photo-item" data-full="images/photo8.jpg"><img src="images/photo8.jpg" alt="Photo 8"></div>
+            <div class="photo-item photo-item-tall" data-full="images/photo8.jpg"><img src="images/photo8.jpg" alt="Photo 8"></div>
             <div class="photo-item" data-full="images/photo9.jpg"><img src="images/photo9.jpg" alt="Photo 9"></div>
             <div class="photo-item photo-item-wide" data-full="images/photo10.jpg"><img src="images/photo10.jpg" alt="Photo 10"></div>
         </div>
@@ -51,28 +91,32 @@
     <section id="rsvp-modal">
         <div class="rsvp-content">
             <span class="close-button">×</span>
+            
             <div style="text-align: center; margin-bottom: 10px;">
                 <a href="index.html" class="nav-button" style="background-color: var(--or); color: black; font-size: 0.8em; padding: 5px 15px;">
                     ← Retour à l'accueil
                 </a>
             </div>
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeJ_KMme99jiIi6VNgSltC-k2VDhNyR_EiYe7MuDjz3Sim7Ew/viewform?embedded=true" width="100%" height="600" frameborder="0">Chargement…</iframe>
+
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeJ_KMme99jiIi6VNgSltC-k2VDhNyR_EiYe7MuDjz3Sim7Ew/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
         </div>
     </section>
 
-    <div id="image-modal" class="modal">
-        <span class="close-modal-button">&times;</span>
-        <img class="modal-content" id="modal-image">
-    </div>
-
     <footer>
-        <div style="display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap;">
-            <img src="images/Animation.gif" alt="Animation" class="footer-icon">
+        <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+            <img src="images/Animation.gif" alt="Animation" class="footer-icon" style="height: 50px;">
             <div id="countdown-timer"></div>
         </div>
-        <p>© 2026 Sherton & Shebnah</p>
+        <p>© 2026 Notre Mariage</p>
     </footer>
+
+    <div id="image-modal" class="modal">
+        <span class="close-modal-button">×</span>
+        <img class="modal-content" id="modal-image">
+    </div>
 
     <script src="script.js"></script>
 </body>
 </html>
+
+
