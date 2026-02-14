@@ -41,7 +41,7 @@ body {
 }
 
 .logo {
-    width: 80px;
+    width: 150px;
 }
 
 nav {
@@ -366,6 +366,7 @@ footer div:first-of-type {
     text-decoration: none;
     cursor: pointer;
 }
+
 
 
 
