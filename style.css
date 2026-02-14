@@ -179,15 +179,22 @@ h2 {
 
 .rsvp-content {
     background-color: var(--rose-raquette);
-    margin: 5% auto;
-    padding: 20px;
-    width: 90%;
+    margin: 2vh auto;
+    padding: 15px;
+    width: 95%; /* Plus large sur mobile */
     max-width: 900px;
-    position: relative;
-    /* Supprimez "height: 80vh" si vous l'aviez mis, et utilisez ceci : */
-    max-height: 90vh; 
-    overflow-y: auto; /* Permet de faire défiler la modale entière si le formulaire est long */
+    height: 90vh; /* Force la modale à prendre 90% de la hauteur de l'écran */
+    display: flex;
+    flex-direction: column; /* Aligne les éléments verticalement */
     border-radius: 15px;
+    position: relative;
+    overflow: hidden; /* Empêche les doubles barres de défilement */
+}
+
+.rsvp-content iframe {
+    flex-grow: 1; /* Le formulaire prend tout l'espace disponible */
+    border: none;
+    width: 100%;
 }
 .rsvp-content iframe {
     width: 100%;
@@ -359,6 +366,7 @@ footer div:first-of-type {
     text-decoration: none;
     cursor: pointer;
 }
+
 
 
 
