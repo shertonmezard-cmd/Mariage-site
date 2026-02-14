@@ -179,14 +179,15 @@ h2 {
 
 .rsvp-content {
     background-color: var(--rose-raquette);
-    margin: 2% auto; /* Un peu plus haut pour laisser de la place au bouton */
+    margin: 5% auto;
     padding: 20px;
-    border-radius: 15px;
     width: 90%;
     max-width: 900px;
     position: relative;
-    max-height: 90vh; /* Empêche la modale de dépasser de l'écran */
-    overflow-y: auto; /* Permet de défiler à l'intérieur de la modale */
+    /* Supprimez "height: 80vh" si vous l'aviez mis, et utilisez ceci : */
+    max-height: 90vh; 
+    overflow-y: auto; /* Permet de faire défiler la modale entière si le formulaire est long */
+    border-radius: 15px;
 }
 .rsvp-content iframe {
     width: 100%;
@@ -358,5 +359,6 @@ footer div:first-of-type {
     text-decoration: none;
     cursor: pointer;
 }
+
 
 
