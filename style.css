@@ -4,46 +4,42 @@
     --texte-sombre: #333333;
 }
 
-body { font-family: 'Lato', sans-serif; margin: 0; text-align: center; }
+body { font-family: 'Lato', sans-serif; margin: 0; text-align: center; color: var(--texte-sombre); }
 
+/* NAVBAR */
 #navbar {
     display: flex; justify-content: space-between; align-items: center;
     position: fixed; top: 0; left: 0; width: 100%;
     padding: 10px 20px; background: white; z-index: 1000;
 }
-
-.nav-button { text-decoration: none; color: black; border: 2px solid var(--bleu-turquoise); padding: 8px 15px; margin-left: 10px; }
+.nav-button { text-decoration: none; color: black; border: 2px solid var(--bleu-turquoise); padding: 8px 15px; margin-left: 10px; font-weight: bold; }
 
 /* SLIDESHOW TECHNIQUE */
 #slideshow-container { position: relative; width: 100%; height: 100vh; overflow: hidden; background: black; }
 .slideshow-image { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1.5s; }
 .slideshow-image.active { opacity: 1; }
+.slideshow-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10; color: white; width: 100%; }
+h1 { font-family: 'Great Vibes', cursive; font-size: 3.5em; color: var(--or); margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
 
-/* REPOSITIONNEMENT DU TEXTE (Pour qu'il soit visible par-dessus les images) */
-.slideshow-text { 
-    position: absolute; 
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    z-index: 10; /* Obligatoire pour passer devant les images */
-    color: white; 
-    width: 100%;
-}
+/* TITRES */
+h2 { background: var(--bleu-turquoise); color: #000 !important; padding: 10px 20px; display: inline-block; margin-top: 40px; font-family: 'Playfair Display', serif; }
 
-h1 { font-family: 'Great Vibes', cursive; font-size: 3.5em; color: var(--or); margin: 0; }
-/* ----------------------------------------------------------------------- */
+/* SECTION VIDÉO */
+.video-container { width: 90%; max-width: 800px; margin: 20px auto; }
+video { width: 100%; border-radius: 0px; /* Garde le style carré si tu préfères */ }
 
-h2 { background: var(--bleu-turquoise); color: #000 !important; padding: 10px 20px; display: inline-block; margin-top: 40px; }
-
+/* MAPS & PROGRAMME */
+.map-container { border: none !important; margin: 20px 0; }
 .nav-button-maps { background-color: var(--bleu-turquoise); color: black; padding: 15px 30px; text-decoration: none; font-weight: bold; display: inline-block; }
+#program ul { list-style: none; padding: 0; font-size: 1.1em; }
 
+/* GALERIE (10 PHOTOS) */
 .photo-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; padding: 20px; }
 .photo-item { border: none !important; }
-.photo-item img { width: 100%; }
+.photo-item img { width: 100%; display: block; }
+.download-link { display: block; margin-top: 5px; font-size: 0.8em; text-decoration: none; color: #555; background: #f9f9f9; padding: 5px; }
 
-.download-link { display: block; margin-top: 5px; font-size: 0.8em; text-decoration: none; color: #555; }
-
-.map-container { border: none !important; }
-
-#countdown-timer { font-size: 2em; color: var(--or); font-weight: bold; }
-footer { padding: 40px; }
+/* FOOTER & HORLOGE */
+footer { padding: 40px; background: white; }
+.footer-timer { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+#countdown-timer { font-size: 1.8em; color: var(--or); font-weight: bold; font-family: 'Playfair Display', serif; }
