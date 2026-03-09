@@ -4,85 +4,44 @@
     --texte-sombre: #333333;
 }
 
-/* --- NAVBAR STYLE PILULE --- */
+body { font-family: 'Lato', sans-serif; margin: 0; padding: 0; color: var(--texte-sombre); overflow-x: hidden; }
+
+/* NAVBAR FLOTTANTE */
 #navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 10px; /* Décalé du haut pour l'effet flottant */
-    left: 2%; width: 96%;
-    padding: 10px 20px;
-    background-color: rgba(255, 255, 255, 0.95);
-    border-radius: 50px; /* Forme pilule */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    z-index: 1000;
+    display: flex; justify-content: space-between; align-items: center;
+    position: fixed; top: 15px; left: 5%; width: 84%;
+    padding: 10px 3%; background: rgba(255, 255, 255, 0.95);
+    border-radius: 50px; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
+.logo { width: 50px; }
+nav .nav-button { text-decoration: none; color: black; border: 2px solid var(--bleu-turquoise); padding: 8px 15px; border-radius: 20px; margin-left: 5px; font-size: 0.8em; font-weight: bold; }
 
-.logo { width: 50px; height: auto; }
-
-nav { display: flex; gap: 10px; }
-
-nav .nav-button {
-    text-decoration: none;
-    color: var(--texte-sombre);
-    font-weight: bold;
-    font-size: 0.85em;
-    padding: 8px 15px;
-    border: 2px solid var(--bleu-turquoise);
-    border-radius: 25px;
-    transition: 0.3s;
-    white-space: nowrap;
+/* SLIDESHOW (RÉPARÉ) */
+#slideshow-container { position: relative; width: 100%; height: 80vh; overflow: hidden; background: #000; }
+.slideshow-image { 
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+    object-fit: cover; opacity: 0; transition: opacity 1.5s ease-in-out; 
 }
+.slideshow-image.active { opacity: 1; }
+.slideshow-text { position: absolute; top: 55%; left: 50%; transform: translate(-50%, -50%); z-index: 10; width: 90%; }
+h1 { font-family: 'Great Vibes', cursive; font-size: 3.5em; color: var(--or); text-shadow: 2px 2px 4px rgba(0,0,0,0.5); margin: 0; }
 
-nav .nav-button:hover {
-    background-color: var(--bleu-turquoise);
-    color: white;
-}
+/* TITRES NOIRS SUR TURQUOISE */
+h2 { background: var(--bleu-turquoise); color: black !important; padding: 12px 25px; border-radius: 10px; display: inline-block; margin-top: 50px; font-family: 'Playfair Display', serif; }
 
-/* --- SUPPRESSION DES BORDURES PHOTOS & MAP --- */
-.map-container, .photo-item {
-    border: none !important;
-    overflow: hidden;
-    border-radius: 15px;
-}
+/* BOUTON MAPS TURQUOISE */
+.nav-button-maps { background-color: var(--bleu-turquoise); color: black; border: none; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 10px; }
 
-.photo-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px; padding: 20px;
-}
+/* GALERIE SANS BORDURES */
+.photo-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; padding: 30px; }
+.photo-item { border: none !important; text-align: center; }
+.photo-item img { width: 100%; border-radius: 15px; transition: 0.3s; cursor: pointer; }
+.download-link { display: inline-block; margin-top: 10px; font-size: 0.85em; text-decoration: none; color: var(--texte-sombre); background: #eee; padding: 5px 15px; border-radius: 15px; }
 
-.photo-item img {
-    width: 100%; border-radius: 10px; cursor: pointer; transition: 0.3s;
-}
+/* MODALE RSVP */
+.modal-bg { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); }
+.rsvp-content { background: white; margin: 5vh auto; width: 90%; height: 85vh; border-radius: 20px; position: relative; padding: 10px; }
+.close-button { position: absolute; top: 10px; right: 20px; font-size: 30px; cursor: pointer; }
 
-/* Lien de téléchargement */
-.download-link {
-    display: inline-block;
-    margin-top: 5px;
-    font-size: 0.75em;
-    color: var(--texte-sombre);
-    text-decoration: none;
-    background: #f0f0f0;
-    padding: 3px 10px;
-    border-radius: 20px;
-}
-
-/* --- TITRES TEXTE NOIR --- */
-h2 {
-    background-color: var(--bleu-turquoise);
-    color: #333 !important;
-    padding: 10px 25px;
-    border-radius: 10px;
-    display: inline-block;
-}
-
-/* Mobile : on réduit la taille des boutons pour que les 3 tiennent */
-@media (max-width: 600px) {
-    nav .nav-button {
-        padding: 5px 10px;
-        font-size: 0.7em;
-    }
-    #navbar { padding: 8px 12px; }
-}
+#countdown-timer { font-size: 1.5em; color: var(--or); font-weight: bold; }
+footer { padding: 40px 20px; background: #fff; }
