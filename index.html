@@ -11,7 +11,7 @@
 
     <header id="navbar">
         <div class="logo-container">
-            <img src="images/logo-mariage.png" alt="Logo" class="logo">
+            <img src="images/logo-mariage.png" alt="Logo de notre mariage" class="logo">
         </div>
         <nav>
             <a href="photos.html" class="nav-button">Photos du jour</a>
@@ -20,50 +20,114 @@
     </header>
 
     <div id="slideshow-container">
-        <img src="images/photo-slideshow1.webp" class="slideshow-image active">
-        <img src="images/photo-slideshow2.webp" class="slideshow-image">
-        <img src="images/photo-slideshow3.webp" class="slideshow-image">
-        <div class="slideshow-text">
-            <h1>Mariage Sherton & Shebnah !!!</h1>
-            <p>Rejoignez-nous pour célébrer notre amour.</p>
-        </div>
+    <img src="images/photo-slideshow1.webp" class="slideshow-image active">
+    <img src="images/photo-slideshow2.webp" class="slideshow-image">
+    <img src="images/photo-slideshow3.webp" class="slideshow-image">
+    <img src="images/photo-slideshow4.webp" class="slideshow-image">
+    <img src="images/photo-slideshow5.webp" class="slideshow-image">
+    
+    <div class="slideshow-text">
+        <h1> Mariage Sherton & Shebnah !!!</h1>
+        <p>Rejoignez-nous pour célébrer notre amour.</p>
     </div>
+</div>
+
+    <section id="info-video">
+        <h2>Informations importantes</h2>
+        <p>Regardez notre vidéo pour tous les détails du mariage.</p>
+        <div class="video-container" style="width: 100%; max-width: 800px; margin: 20px auto; text-align: center;">
+            <iframe 
+                src="https://drive.google.com/file/d/1pJvQa77o2oCk2ML3Ay4muCSNNWQfSkWg/preview" 
+                width="100%" height="480" allow="autoplay" 
+                style="border:none; border-radius: 15px; box-shadow: 0px 4px 15px rgba(0,0,0,0.2);">
+            </iframe>
+        </div>
+    </section>
 
     <section id="plan">
         <h2>Lieu de la Cérémonie</h2>
-        <p>Nous vous attendons à : <strong>Tabarre 27, en face le Roseau</strong></p>
+        <p>Nous vous attendons à : <strong>Marassa 14, Impasse Romain</strong></p>
+        
         <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.123!2d-72.28!3d18.57" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe 
+                src=<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d742.9562668194491!2d-72.25957266410852!3d18.577849585888572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sht!4v1773072924238!5m2!1sen!2sht" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
         </div>
+
         <div class="map-actions">
-            <a href="#" class="nav-button-maps">📍 Ouvrir dans Google Maps</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Marassa+14+Impasse+Romain+Haiti" 
+               target="_blank" class="nav-button" 
+               style="background-color: #ffd700; color: #333; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; display: inline-block; margin-top: 10px;">
+               📍 Ouvrir dans Google Maps
+            </a>
         </div>
+    </section>
+
+    <section id="program">
+        <h2>Programme de la journée</h2>
+        <ul>
+            <li>09h00 à 12h00 : Cérémonie du mariage à l'eglise</li>
+            <li>12h00 à 18h00 : Cocktail, danse et photos</li>
+        </ul>
     </section>
 
     <section id="photos">
         <h2>Nos souvenirs</h2>
         <div class="photo-gallery">
-            <div class="photo-item"><img src="images/photo1.webp"><a href="images/photo1.webp" download class="download-link">📥 Télécharger</a></div>
-            <div class="photo-item"><img src="images/photo2.webp"><a href="images/photo2.webp" download class="download-link">📥 Télécharger</a></div>
-            <div class="photo-item"><img src="images/photo3.webp"><a href="images/photo3.webp" download class="download-link">📥 Télécharger</a></div>
-            <div class="photo-item"><img src="images/photo4.webp"><a href="images/photo4.webp" download class="download-link">📥 Télécharger</a></div>
-            <div class="photo-item"><img src="images/photo5.webp"><a href="images/photo5.webp" download class="download-link">📥 Télécharger</a></div>
-            <div class="photo-item"><img src="images/photo6.webp"><a href="images/photo6.webp" download class="download-link">📥 Télécharger</a></div>
-            <div class="photo-item"><img src="images/photo7.webp"><a href="images/photo7.webp" download class="download-link">📥 Télécharger</a></div>
-            <div class="photo-item"><img src="images/photo8.webp"><a href="images/photo8.webp" download class="download-link">📥 Télécharger</a></div>
-            <div class="photo-item"><img src="images/photo9.webp"><a href="images/photo9.webp" download class="download-link">📥 Télécharger</a></div>
-            <div class="photo-item"><img src="images/photo10.webp"><a href="images/photo10.webp" download class="download-link">📥 Télécharger</a></div>
+            <div class="photo-item photo-item-large" data-full="images/photo1.webp"><img src="images/photo1.webp" alt="Photo 1"></div>
+            <div class="photo-item" data-full="images/photo2.webp"><img src="images/photo2.webp" alt="Photo 2"></div>
+            <div class="photo-item" data-full="images/photo3.webp"><img src="images/photo3.webp" alt="Photo 3"></div>
+            <div class="photo-item photo-item-wide" data-full="images/photo4.webp"><img src="images/photo4.webp" alt="Photo 4"></div>
+            <div class="photo-item" data-full="images/photo5.webp"><img src="images/photo5.webp" alt="Photo 5"></div>
+            <div class="photo-item" data-full="images/photo6.webp"><img src="images/photo6.webp" alt="Photo 6"></div>
+            <div class="photo-item" data-full="images/photo7.webp"><img src="images/photo7.webp" alt="Photo 7"></div>
+            <div class="photo-item photo-item-tall" data-full="images/photo8.webp"><img src="images/photo8.webp" alt="Photo 8"></div>
+            <div class="photo-item" data-full="images/photo9.webp"><img src="images/photo9.webp" alt="Photo 9"></div>
+            <div class="photo-item photo-item-wide" data-full="images/photo10.webp"><img src="images/photo10.webp" alt="Photo 10"></div>
         </div>
     </section>
+    
+  <section id="rsvp-modal">
+    <div class="rsvp-content">
+        <span class="close-button">×</span>
+        
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeJ_KMme99jiIi6VNgSltC-k2VDhNyR_EiYe7MuDjz3Sim7Ew/viewform?embedded=true" 
+                frameborder="0" marginheight="0" marginwidth="0">
+                Chargement…
+        </iframe>
+
+        <div style="text-align: center; padding: 10px 0;">
+            <a href="index.html" class="nav-button" style="background-color: var(--or); color: black; padding: 8px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 0.9em;">
+                ← Retour à l'accueil
+            </a>
+        </div>
+    </div>
+</section>
 
     <footer>
-        <div class="footer-timer">
-            <img src="images/Animation.gif" alt="Animation" style="height: 60px;">
+        <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+            <img src="images/Animation.gif" alt="Animation" class="footer-icon" style="height: 50px;">
             <div id="countdown-timer"></div>
         </div>
         <p>© 2026 Mariage de Sherton et Shebnah</p>
     </footer>
 
+    <div id="image-modal" class="modal">
+        <span class="close-modal-button">×</span>
+        <img class="modal-content" id="modal-image">
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
