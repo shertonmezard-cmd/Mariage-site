@@ -1,4 +1,4 @@
-// 1. COMPTE À REBOURS
+// 1. CONFIGURATION DU COMPTE À REBOURS (HORLOGE)
 const weddingDate = new Date("April 25, 2026 08:30:00").getTime();
 
 const countdownFunction = setInterval(function() {
@@ -21,35 +21,36 @@ const countdownFunction = setInterval(function() {
     }
 }, 1000);
 
-// 2. DIAPORAMA
+// 2. LOGIQUE DU DIAPORAMA (Pour tes 3 photos)
 let currentImageIndex = 0;
 function nextImage() {
     const images = document.querySelectorAll('.slideshow-image');
     if (images.length === 0) return;
+
     images[currentImageIndex].classList.remove('active');
     currentImageIndex = (currentImageIndex + 1) % images.length;
     images[currentImageIndex].classList.add('active');
 }
 setInterval(nextImage, 5000);
 
-// 3. FORMULAIRE RSVP
+// 3. GESTION DE LA MODALE RSVP
 const rsvpModal = document.getElementById('rsvp-modal');
 const showRsvpButton = document.getElementById('show-rsvp-button');
 const closeButton = document.querySelector('.close-button');
 
 if (showRsvpButton && rsvpModal) {
-    showRsvpButton.addEventListener('click', (e) => {
+    showRsvpButton.onclick = function(e) {
         e.preventDefault();
         rsvpModal.style.display = 'block';
-    });
+    }
 }
 if (closeButton) {
-    closeButton.addEventListener('click', () => {
+    closeButton.onclick = function() {
         rsvpModal.style.display = 'none';
-    });
+    }
 }
-
-// Fermeture des modales en cliquant à côté
-window.addEventListener('click', (event) => {
-    if (event.target === rsvpModal) rsvpModal.style.display = 'none';
-});
+window.onclick = function(event) {
+    if (event.target == rsvpModal) {
+        rsvpModal.style.display = 'none';
+    }
+}
