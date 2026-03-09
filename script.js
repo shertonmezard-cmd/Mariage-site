@@ -1,4 +1,6 @@
+// ==========================================
 // 1. COMPTE À REBOURS
+// ==========================================
 const weddingDate = new Date("April 25, 2026 08:30:00").getTime();
 
 const countdownFunction = setInterval(function() {
@@ -12,7 +14,8 @@ const countdownFunction = setInterval(function() {
 
     const timerElement = document.getElementById("countdown-timer");
     if (timerElement) {
-        timerElement.innerHTML = `${days} jours, ${hours} heures, ${minutes} minutes, ${seconds} secondes`;
+        // Format court pour bien s'afficher dans le footer à côté de l'animation
+        timerElement.innerHTML = `${days}j ${hours}h ${minutes}m ${seconds}s`;
     }
 
     if (distance < 0) {
@@ -22,7 +25,9 @@ const countdownFunction = setInterval(function() {
 }, 1000);
 
 
-// 2. DIAPORAMA (Logique simplifiée)
+// ==========================================
+// 2. DIAPORAMA (Limité aux 3 premières images)
+// ==========================================
 let currentImageIndex = 0;
 
 function nextImage() {
@@ -32,45 +37,50 @@ function nextImage() {
     // Masquer l'image actuelle
     images[currentImageIndex].classList.remove('active');
 
-    // Passer à la suivante (boucle infinie)
+    // Passer à l'image suivante (boucle sur le nombre d'images présentes)
     currentImageIndex = (currentImageIndex + 1) % images.length;
 
     // Afficher la nouvelle image
     images[currentImageIndex].classList.add('active');
 }
 
-// Lancement automatique toutes les 5 secondes
+// Change d'image toutes les 5 secondes
 setInterval(nextImage, 5000);
 
 
-// 3. FORMULAIRE RSVP (Pop-up)
+// ==========================================
+// 3. FORMULAIRE RSVP (Pop-up Modale)
+// ==========================================
 const rsvpModal = document.getElementById('rsvp-modal');
 const showRsvpButton = document.getElementById('show-rsvp-button');
-const closeButton = document.querySelector('.close-button');
+const closeRsvpButton = document.querySelector('.close-button');
 
 if (showRsvpButton && rsvpModal) {
     showRsvpButton.addEventListener('click', (e) => {
-        e.preventDefault();
+        e.preventDefault(); // Empêche le saut de page
         rsvpModal.style.display = 'block';
     });
 }
 
-if (closeButton) {
-    closeButton.addEventListener('click', () => {
+if (closeRsvpButton) {
+    closeRsvpButton.addEventListener('click', () => {
         rsvpModal.style.display = 'none';
     });
 }
 
 
-// 4. MODALE GALERIE PHOTOS
+// ==========================================
+// 4. MODALE GALERIE PHOTOS (Agrandissement)
+// ==========================================
 const imageModal = document.getElementById('image-modal');
 const modalImage = document.getElementById('modal-image');
 const closeModalButton = document.querySelector('.close-modal-button');
-const photoItems = document.querySelectorAll('.photo-item');
+const photoItems = document.querySelectorAll('.photo-item img');
 
-photoItems.forEach(item => {
-    item.addEventListener('click', function() {
-        const imagePath = this.getAttribute('data-full');
+photoItems.forEach(img => {
+    img.addEventListener('click', function() {
+        // On récupère le lien de l'image haute définition
+        const imagePath = this.parentElement.getAttribute('data-full') || this.src;
         if (modalImage && imageModal) {
             modalImage.src = imagePath;
             imageModal.style.display = 'block';
@@ -84,8 +94,17 @@ if (closeModalButton) {
     });
 }
 
-// Fermeture des modales en cliquant à côté
+
+// ==========================================
+// 5. FERMETURE DES MODALES AU CLIC EXTÉRIEUR
+// ==========================================
 window.addEventListener('click', (event) => {
-    if (event.target === rsvpModal) rsvpModal.style.display = 'none';
-    if (event.target === imageModal) imageModal.style.display = 'none';
+    // Si on clique sur le fond sombre de la modale RSVP
+    if (event.target === rsvpModal) {
+        rsvpModal.style.display = 'none';
+    }
+    // Si on clique sur le fond sombre de la modale Image
+    if (event.target === imageModal) {
+        imageModal.style.display = 'none';
+    }
 });
