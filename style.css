@@ -24,7 +24,7 @@ body { font-family: 'Lato', sans-serif; margin: 0; text-align: center; color: va
     box-sizing: border-box;
 }
 #navbar .logo {
-    max-height: 40px; /* Réduit un peu la taille du logo dans la barre du haut */
+   max-height: 70px; /* On passe de 40px à 70px pour qu'il soit bien visible */
     width: auto;
 }
 .nav-button {
@@ -164,6 +164,7 @@ footer {
     /* ON SUPPRIME LE SHADOW (l'ombre) */
     filter: none;             
 }
+
 
 
 
