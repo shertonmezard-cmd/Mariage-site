@@ -97,8 +97,46 @@ footer {
     margin: 20px auto 0;
 }
 
+/* STYLE DES CRÉDITS PROFESSIONNELS */
+.footer-credits {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(0,0,0,0.05); /* Ligne de séparation fine */
+}
 
+.copyright {
+    font-size: 0.8rem !important;
+    color: #999 !important;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
 
+.branding {
+    font-size: 0.9rem;
+    color: #555;
+    font-weight: 300;
+}
+
+.author, .partner {
+    font-weight: 600;
+    color: var(--bleu-turquoise); /* Utilise ta couleur de thème */
+}
+
+.separator {
+    margin: 0 8px;
+    color: #ccc;
+}
+
+/* AGRANDIR L'ANIMATION GIF */
+.footer-animation {
+    display: block;
+    margin: 20px auto; /* Centre l'image et ajoute de l'espace */
+    width: 100%;       /* Permet à l'image de s'étendre... */
+    max-width: 400px;  /* ...jusqu'à 400px (ajuste ce chiffre pour plus grand) */
+    height: auto;      /* Garde les proportions de l'image */
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1)); /* Optionnel : ajoute un léger relief */
+}
 
 
 
