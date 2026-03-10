@@ -25,12 +25,13 @@ h1 { font-family: 'Great Vibes', cursive; font-size: 3.5em; color: var(--or); ma
 h2 {
     background: var(--bleu-turquoise);
     color: #000 !important;
-    padding: 10px 20px;
-    display: inline-block;
-    margin-top: 40px;
+    padding: 10px 25px;      /* Un peu d'espace à l'intérieur du rectangle */
+    display: inline-block;   /* Permet au rectangle de s'adapter au texte pour voir l'arrondi */
+    border-radius: 15px;     /* L'arrondi des bords */
+    
+    margin: 40px auto 20px auto; /* Centre le titre horizontalement */
     font-family: 'Playfair Display', serif;
-    /* C'est cette ligne qui arrondit les bords du titre */
-    border-radius: 12px; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Petite ombre pour faire ressortir le titre */
 }
 
 /* SECTION VIDÉO */
@@ -76,6 +77,7 @@ footer { padding: 40px; background: white; }
     width: auto;  /* Garde les proportions de l'image intactes */
     display: block;
 }
+
 
 
 
