@@ -33,11 +33,29 @@ video { width: 100%; border-radius: 0px; /* Garde le style carré si tu préfèr
 .nav-button-maps { background-color: var(--bleu-turquoise); color: black; padding: 15px 30px; text-decoration: none; font-weight: bold; display: inline-block; }
 #program ul { list-style: none; padding: 0; font-size: 1.1em; }
 
-/* GALERIE (10 PHOTOS) */
-.photo-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; padding: 20px; }
-.photo-item { border: none !important; }
-.photo-item img { width: 100%; display: block; }
-.download-link { display: block; margin-top: 5px; font-size: 0.8em; text-decoration: none; color: #555; background: #f9f9f9; padding: 5px; }
+/* GALERIE (10 PHOTOS) - STYLE MOSAÏQUE AVEC BORDS ARRONDIS */
+.photo-gallery {
+    column-count: 3;       /* Crée 3 colonnes comme sur ton modèle */
+    column-gap: 15px;      /* Espace entre les colonnes */
+    padding: 20px;
+}
+
+.photo-item {
+    display: inline-block; /* Empêche les photos de se couper entre deux colonnes */
+    width: 100%;
+    margin-bottom: 15px;   /* Espace vertical entre les photos */
+}
+
+.photo-item img {
+    width: 100%;
+    display: block;
+    border-radius: 20px;   /* C'est ici qu'on arrondit les bords */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Ajoute une légère ombre douce */
+}
+
+.download-link {
+    display: none;         /* On cache le bouton de téléchargement pour garder le style épuré du modèle */
+}
 
 /* FOOTER & HORLOGE */
 footer { padding: 40px; background: white; }
@@ -49,6 +67,7 @@ footer { padding: 40px; background: white; }
     width: auto;  /* Garde les proportions de l'image intactes */
     display: block;
 }
+
 
 
 
