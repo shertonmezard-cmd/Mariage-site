@@ -22,7 +22,16 @@ body { font-family: 'Lato', sans-serif; margin: 0; text-align: center; color: va
 h1 { font-family: 'Great Vibes', cursive; font-size: 3.5em; color: var(--or); margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
 
 /* TITRES */
-h2 { background: var(--bleu-turquoise); color: #000 !important; padding: 10px 20px; display: inline-block; margin-top: 40px; font-family: 'Playfair Display', serif; }
+h2 {
+    background: var(--bleu-turquoise);
+    color: #000 !important;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 40px;
+    font-family: 'Playfair Display', serif;
+    /* C'est cette ligne qui arrondit les bords du titre */
+    border-radius: 12px; 
+}
 
 /* SECTION VIDÉO */
 .video-container { width: 90%; max-width: 800px; margin: 20px auto; }
@@ -67,6 +76,7 @@ footer { padding: 40px; background: white; }
     width: auto;  /* Garde les proportions de l'image intactes */
     display: block;
 }
+
 
 
 
