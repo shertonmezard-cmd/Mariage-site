@@ -131,12 +131,15 @@ footer {
 /* AGRANDIR L'ANIMATION GIF */
 .footer-animation {
     display: block;
-    margin: 20px auto; /* Centre l'image et ajoute de l'espace */
-    width: 100%;       /* Permet à l'image de s'étendre... */
-    max-width: 200px;  /* ...jusqu'à 400px (ajuste ce chiffre pour plus grand) */
-    height: auto;      /* Garde les proportions de l'image */
-    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1)); /* Optionnel : ajoute un léger relief */
+    margin: 0 auto 20px auto; /* Centre l'image et ajoute de l'espace en bas */
+    width: 60%;               /* S'adapte aux petits écrans */
+    max-width: 150px;         /* TAILLE RÉDUITE : C'est ce chiffre qu'il faut changer si tu veux ajuster */
+    height: auto;
+    
+    /* ON SUPPRIME LE SHADOW (l'ombre) */
+    filter: none;             
 }
+
 
 
 
