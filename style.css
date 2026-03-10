@@ -45,9 +45,10 @@ footer { padding: 40px; background: white; }
 #countdown-timer { font-size: 1.8em; color: var(--or); font-weight: bold; font-family: 'Playfair Display', serif; }
 
 .logo {
-    height: 20px; /* Réduis ce chiffre (par exemple 40px ou 30px) pour rapetisser le logo */
+    height: 40px; /* Réduis ce chiffre (par exemple 40px ou 30px) pour rapetisser le logo */
     width: auto;  /* Garde les proportions de l'image intactes */
     display: block;
 }
+
 
 
