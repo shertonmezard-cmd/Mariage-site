@@ -17,7 +17,9 @@ const countdownFunction = setInterval(function() {
 
     if (distance < 0) {
         clearInterval(countdownFunction);
-        if (timerElement) timerElement.innerHTML = "C'est le grand jour !";
+        if (timerElement) {
+            timerElement.innerHTML = "C'est le grand jour !";
+        }
     }
 }, 1000);
 
@@ -42,15 +44,17 @@ if (showRsvpButton && rsvpModal) {
     showRsvpButton.onclick = function(e) {
         e.preventDefault();
         rsvpModal.style.display = 'block';
-    }
+    };
 }
+
 if (closeButton) {
     closeButton.onclick = function() {
         rsvpModal.style.display = 'none';
-    }
+    };
 }
+
 window.onclick = function(event) {
     if (event.target == rsvpModal) {
         rsvpModal.style.display = 'none';
     }
-}
+};
