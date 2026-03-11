@@ -168,9 +168,10 @@ footer {
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
-    margin-left: auto;  /* MAGIQUE : Pousse le burger à l'opposé du logo */
-    margin-right: 15px; /* Garde un petit espace avec le bord de l'écran */
-    z-index: 1100;      /* S'assure qu'il passe au-dessus du reste */
+    margin-left: auto;  /* Pousse le burger à droite */
+    margin-right: 15px;
+    z-index: 1100;
+    flex-shrink: 0;     /* Empêche le burger de s'écraser */
 }
 
 .burger-menu span {
@@ -184,6 +185,12 @@ footer {
 /* Sur mobile (max 768px) */
 @media (max-width: 768px) {
     .burger-menu { display: flex; } /* On montre le burger */
+
+    /* AJOUT : On réduit le logo pour laisser de la place au burger */
+    #navbar .logo {
+        max-width: 150px; 
+        height: auto;
+    }
 
     .nav-links {
         display: none; /* On cache les boutons */
@@ -204,6 +211,7 @@ footer {
         width: 80%;
     }
 }
+
 
 
 
