@@ -108,12 +108,12 @@ footer {
 }
 
 #countdown-timer {
-    font-size: 3.5rem; /* On passe de 1.8em à 3.5rem pour un effet "Wow" */
-    color: var(--bleu-turquoise);
+    font-size: 3.5rem; 
+    color: #000000 !important; /* On force le noir absolu */
     font-weight: bold;
     font-family: 'Playfair Display', serif;
-    letter-spacing: 2px; /* Un peu d'espace entre les chiffres */
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    letter-spacing: 2px;
+    text-shadow: none !important; /* On enlève l'ombre qui peut donner un aspect bleuté */
 }
 
 footer .logo {  /* On précise bien que c'est celui du footer */
@@ -216,6 +216,7 @@ footer .logo {  /* On précise bien que c'est celui du footer */
         width: 80%;
     }
 }
+
 
 
 
