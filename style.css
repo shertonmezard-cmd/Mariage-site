@@ -164,6 +164,46 @@ footer {
     /* ON SUPPRIME LE SHADOW (l'ombre) */
     filter: none;             
 }
+/* --- STYLE MENU BURGER --- */
+.burger-menu {
+    display: none; /* Caché sur ordinateur */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.burger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--bleu-turquoise);
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+/* Sur mobile (max 768px) */
+@media (max-width: 768px) {
+    .burger-menu { display: flex; } /* On montre le burger */
+
+    .nav-links {
+        display: none; /* On cache les boutons */
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* S'affiche juste sous la barre blanche */
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active { display: flex; } /* S'affiche au clic */
+
+    .nav-button {
+        margin: 10px auto;
+        width: 80%;
+    }
+}
 
 
 
