@@ -23,7 +23,7 @@ body { font-family: 'Lato', sans-serif; margin: 0; text-align: center; color: va
     height: 70px;         /* Barre plus fine et élégante */
 }
 #navbar .logo {
-    height: 45px;      /* Taille parfaite pour mobile */
+    height: 35px;      /* Taille parfaite pour mobile */
     max-width: 120px;  /* On limite la largeur pour laisser de la place à droite */
     width: auto;
     display: block;
@@ -212,6 +212,7 @@ footer {
         width: 80%;
     }
 }
+
 
 
 
