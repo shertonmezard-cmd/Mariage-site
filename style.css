@@ -9,19 +9,17 @@ body { font-family: 'Lato', sans-serif; margin: 0; text-align: center; color: va
 /* NAVBAR */
 #navbar {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; /* Pousse le logo à gauche et le burger à droite */
+    align-items: center;           /* Aligne les deux parfaitement verticalement */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    /* On ajoute un peu plus de marge à droite pour s'éloigner du bord de l'écran */
-    padding: 5px 15px 5px 10px; 
+    padding: 5px 15px;
     background: white;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    height: auto;
-    box-sizing: border-box;
+    box-sizing: border-box;        /* Empêche le débordement */
+    height: 80px;                  /* On fixe une hauteur pour éviter les décalages */
 }
 #navbar .logo {
    max-height: 70px; /* On passe de 40px à 70px pour qu'il soit bien visible */
@@ -166,11 +164,13 @@ footer {
 }
 /* --- STYLE MENU BURGER --- */
 .burger-menu {
-    display: none; /* Caché sur ordinateur */
+    display: none;      /* Caché sur ordinateur */
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
-    margin-right: 15px;
+    margin-left: auto;  /* MAGIQUE : Pousse le burger à l'opposé du logo */
+    margin-right: 15px; /* Garde un petit espace avec le bord de l'écran */
+    z-index: 1100;      /* S'assure qu'il passe au-dessus du reste */
 }
 
 .burger-menu span {
@@ -204,6 +204,7 @@ footer {
         width: 80%;
     }
 }
+
 
 
 
