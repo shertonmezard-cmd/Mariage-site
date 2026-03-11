@@ -58,3 +58,11 @@ window.onclick = function(event) {
         rsvpModal.style.display = 'none';
     }
 };
+const burgerMenu = document.getElementById('burger-menu');
+const navLinks = document.getElementById('nav-links');
+
+burgerMenu.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    // Optionnel : Animation des barres en X
+    burgerMenu.classList.toggle('toggle');
+});
