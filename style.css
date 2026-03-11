@@ -192,7 +192,10 @@ footer .logo {  /* On précise bien que c'est celui du footer */
         max-width: 150px; 
         height: auto;
     }
-
+#countdown-timer {
+        font-size: 2rem !important; /* On réduit la taille pour le mobile */
+        letter-spacing: 1px;        /* On resserre les chiffres */
+    }
     .nav-links {
         display: none; /* On cache les boutons */
         flex-direction: column;
@@ -212,6 +215,7 @@ footer .logo {  /* On précise bien que c'est celui du footer */
         width: 80%;
     }
 }
+
 
 
 
