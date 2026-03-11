@@ -9,8 +9,8 @@ body { font-family: 'Lato', sans-serif; margin: 0; text-align: center; color: va
 /* NAVBAR */
 #navbar {
     display: flex;
-    justify-content: space-between; /* Pousse le logo à gauche et le burger à droite */
-    align-items: center;           /* Aligne les deux parfaitement verticalement */
+    justify-content: space-between; 
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
@@ -18,12 +18,15 @@ body { font-family: 'Lato', sans-serif; margin: 0; text-align: center; color: va
     padding: 5px 15px;
     background: white;
     z-index: 1000;
-    box-sizing: border-box;        /* Empêche le débordement */
-    height: 80px;                  /* On fixe une hauteur pour éviter les décalages */
+    box-sizing: border-box;
+    flex-wrap: nowrap; /* EMPÊCHE le burger de passer en dessous */
+    height: 70px;      /* Hauteur fixe pour stabiliser le tout */
 }
 #navbar .logo {
-   max-height: 70px; /* On passe de 40px à 70px pour qu'il soit bien visible */
+    height: 50px;      /* On descend à 50px au lieu de 70px */
     width: auto;
+    max-width: 130px;  /* On limite sa largeur pour laisser de la place à droite */
+    display: block;
 }
 .nav-button {
     text-decoration: none;
@@ -211,6 +214,7 @@ footer {
         width: 80%;
     }
 }
+
 
 
 
