@@ -109,13 +109,12 @@ footer {
 
 #countdown-timer {
     font-size: 3.5rem; 
-    color: #000000 !important; /* On force le noir absolu */
+    color: #000000 !important;
     font-weight: bold;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Lato', sans-serif !important; /* On change ici */
     letter-spacing: 2px;
-    text-shadow: none !important; /* On enlève l'ombre qui peut donner un aspect bleuté */
+    text-shadow: none !important;
 }
-
 footer .logo {  /* On précise bien que c'est celui du footer */
     height: 80px; 
     width: auto;
@@ -195,7 +194,7 @@ footer .logo {  /* On précise bien que c'est celui du footer */
 #countdown-timer {
         font-size: 2rem !important; 
         letter-spacing: 1px;
-        /* La couleur sera déjà noire grâce à la modif de la ligne 110 */
+        font-family: 'Lato', sans-serif !important; /* Sécurité supplémentaire */
     }
     .nav-links {
         display: none; /* On cache les boutons */
@@ -216,6 +215,7 @@ footer .logo {  /* On précise bien que c'est celui du footer */
         width: 80%;
     }
 }
+
 
 
 
