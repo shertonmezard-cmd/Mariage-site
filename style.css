@@ -6,11 +6,12 @@
 
 body { font-family: 'Lato', sans-serif; margin: 0; text-align: center; color: var(--texte-sombre); }
 
-/* 1. Le conteneur de l'image (ton header) */
 header {
-    height: 100vh; /* Prend tout l'écran */
-    position: relative; /* Base pour placer la flèche en bas */
+    height: 100vh;
+    position: relative;
     width: 100%;
+    /* On remet l'image de fond ici pour qu'elle s'affiche sous le logo et la flèche */
+    background: url('images/photo-slideshow1.webp') no-repeat center center/cover;
 }
 
 /* 2. La barre de menu blanche uniquement */
@@ -18,13 +19,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed; /* Reste en haut au défilement */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 70px; /* Hauteur fixe pour le menu */
+    height: 70px;
     background: white;
-    z-index: 1000;
+    z-index: 1001; /* Un peu plus haut que le reste */
     padding: 0 15px;
     box-sizing: border-box;
 }
@@ -254,6 +255,7 @@ footer .logo {  /* On précise bien que c'est celui du footer */
     50% { opacity: 1; }
     100% { opacity: 0; transform: rotate(45deg) translate(10px, 10px); }
 }
+
 
 
 
