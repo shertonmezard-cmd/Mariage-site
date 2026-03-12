@@ -7,28 +7,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
 <header id="navbar">
-   <img src="images/logo-mariage.png" alt="Logo" class="logo">
+    <img src="images/logo-mariage.png" alt="Logo" class="logo">
 
     <div class="burger-menu" id="burger-menu">
         <span></span>
         <span></span>
-        <span></span>
+      <span></span>
     </div>
-</div> 
 
-    <div class="scroll-arrow">
+    <div class="scroll-arrow" onclick="window.scrollTo({top: window.innerHeight, behavior: 'smooth'})">
         <span></span>
         <span></span>
         <p>Découvrez notre histoire</p>
     </div>
 </header>
-    <nav class="nav-links" id="nav-links">
-        <a href="photos.html" class="nav-button">Photos du jour</a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeJ_KMme99jiIi6VNgSltC-k2VDhNyR_EiYe7MuDjz3Sim7Ew/viewform?usp=sf_link" id="show-rsvp-button" class="nav-button" target="_blank">Réservation</a>
-    </nav>
-</header>
+
+<nav class="nav-links" id="nav-links">
+    <a href="photos.html" class="nav-button">Photos du jour</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeJ_KMme99jiIi6VNgSltC-k2VDhNyR_EiYe7MuDjz3Sim7Ew/viewform" class="nav-button" target="_blank">Réservation</a>
+</nav>
 
     <div id="slideshow-container">
         <img src="images/photo-slideshow1.webp" class="slideshow-image active">
@@ -122,6 +120,7 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
