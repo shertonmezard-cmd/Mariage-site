@@ -6,25 +6,27 @@
 
 body { font-family: 'Lato', sans-serif; margin: 0; text-align: center; color: var(--texte-sombre); }
 
+/* 1. Le conteneur de l'image (ton header) */
+header {
+    height: 100vh; /* Prend tout l'écran */
+    position: relative; /* Base pour placer la flèche en bas */
+    width: 100%;
+}
+
+/* 2. La barre de menu blanche uniquement */
 #navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed; /* Reste fixé en haut lors du scroll */
+    position: fixed; /* Reste en haut au défilement */
     top: 0;
     left: 0;
     width: 100%;
-    height: 70px; /* Taille fixe pour la barre de menu uniquement */
+    height: 70px; /* Hauteur fixe pour le menu */
     background: white;
     z-index: 1000;
     padding: 0 15px;
     box-sizing: border-box;
-}
-
-/* On ajoute ce nouveau style pour que la flèche sache où se placer */
-header {
-    height: 100vh; /* L'image de fond prend tout l'écran */
-    position: relative; /* La flèche se fixera par rapport à ce bloc */
 }
 #navbar .logo {
     height: 45px !important;  /* Force la taille à 45px */
@@ -252,6 +254,7 @@ footer .logo {  /* On précise bien que c'est celui du footer */
     50% { opacity: 1; }
     100% { opacity: 0; transform: rotate(45deg) translate(10px, 10px); }
 }
+
 
 
 
