@@ -6,21 +6,25 @@
 
 body { font-family: 'Lato', sans-serif; margin: 0; text-align: center; color: var(--texte-sombre); }
 
-/* NAVBAR */
 #navbar {
     display: flex;
-    justify-content: space-between; /* LOGO à gauche <---> BURGER à droite */
+    justify-content: space-between;
     align-items: center;
-    position: fixed;
+    position: fixed; /* Reste fixé en haut lors du scroll */
     top: 0;
     left: 0;
     width: 100%;
-    padding: 0 15px;      /* On enlève le padding haut/bas pour gagner de la place */
+    height: 70px; /* Taille fixe pour la barre de menu uniquement */
     background: white;
     z-index: 1000;
+    padding: 0 15px;
     box-sizing: border-box;
-    flex-wrap: nowrap;    /* Interdit de passer à la ligne */
-    height: 70px;         /* Barre plus fine et élégante */
+}
+
+/* On ajoute ce nouveau style pour que la flèche sache où se placer */
+header {
+    height: 100vh; /* L'image de fond prend tout l'écran */
+    position: relative; /* La flèche se fixera par rapport à ce bloc */
 }
 #navbar .logo {
     height: 45px !important;  /* Force la taille à 45px */
@@ -217,22 +221,22 @@ footer .logo {  /* On précise bien que c'est celui du footer */
 }
 .scroll-arrow {
     position: absolute;
-    bottom: 40px;
+    bottom: 20px; /* Positionnée à 20px du bord bas */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    z-index: 20;
+    z-index: 2000; /* Augmenté pour être certain qu'elle passe DEVANT l'image */
 }
 
 .scroll-arrow span {
     display: block;
     width: 20px;
     height: 20px;
-    border-bottom: 3px solid #000000;
-    border-right: 3px solid #000000;
+    border-bottom: 3px solid #ffffff;
+    border-right: 3px solid #ffffff;
     transform: rotate(45deg);
     margin: -5px;
     animation: arrow-down 2s infinite;
@@ -248,6 +252,7 @@ footer .logo {  /* On précise bien que c'est celui du footer */
     50% { opacity: 1; }
     100% { opacity: 0; transform: rotate(45deg) translate(10px, 10px); }
 }
+
 
 
 
