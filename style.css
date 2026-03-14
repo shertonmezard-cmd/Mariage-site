@@ -10,7 +10,8 @@ header {
     height: 100vh;
     position: relative;
     width: 100%;
-    pointer-events: none; /* Laisse passer le regard sur les photos */
+    background: transparent; /* Indispensable pour voir derrière */
+    pointer-events: none; 
     z-index: 10;
 }
 
@@ -22,12 +23,12 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 70px; /* On reste sur une petite barre en haut */
-    background: white;
+    height: 70px;
+    background: white; /* Seule cette petite barre sera blanche */
     z-index: 1001;
     padding: 0 15px;
     box-sizing: border-box;
-    pointer-events: auto; /* Réactive le clic pour le logo et le burger */
+    pointer-events: auto;
 }
 #navbar .logo {
     height: 45px !important;  /* Force la taille à 45px */
