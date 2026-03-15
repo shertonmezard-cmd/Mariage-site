@@ -319,3 +319,26 @@ z-index:5;
 .slideshow-text{
 z-index:10;
 }
+#slideshow-container {
+    position: relative;
+}
+
+/* VOILE ROMANTIQUE */
+#slideshow-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.35); /* voile sombre doux */
+
+    z-index: 5;
+}
+
+/* TEXTE AU DESSUS DU VOILE */
+.slideshow-text {
+    position: absolute;
+    z-index: 10;
+}
