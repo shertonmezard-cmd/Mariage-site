@@ -1,26 +1,25 @@
-// 1. CONFIGURATION DU COMPTE À REBOURS (HORLOGE)
+// 1. CONFIGURATION DU COMPTE À REBOURS
 const weddingDate = new Date("April 25, 2026 08:30:00").getTime();
 
 const countdownFunction = setInterval(function() {
-    const now = new Date().getTime();
-    const distance = weddingDate - now;
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+const now = new Date().getTime();
+const distance = weddingDate - now;
 
-    const timerElement = document.getElementById("countdown-timer");
-    if (timerElement) {
-        timerElement.innerHTML = `${days} jours, ${hours} heures, ${minutes} minutes, ${seconds} secondes`;
-    }
+const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    if (distance < 0) {
-        clearInterval(countdownFunction);
-        if (timerElement) {
-            timerElement.innerHTML = "C'est le grand jour !";
-        }
-    }
+document.getElementById("days").innerText = days;
+document.getElementById("hours").innerText = hours;
+document.getElementById("minutes").innerText = minutes;
+document.getElementById("seconds").innerText = seconds;
+
+if (distance < 0) {
+clearInterval(countdownFunction);
+}
+
 }, 1000);
 
 // 2. LOGIQUE DU DIAPORAMA (Pour tes 3 photos)
