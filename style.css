@@ -6,15 +6,17 @@
 
 body { font-family: 'Lato', sans-serif; margin: 0; text-align: center; color: var(--texte-sombre); }
 
+/* 1. Le conteneur qui gère l'espace de l'écran */
 header {
     height: 100vh;
     position: relative;
     width: 100%;
-    background: transparent; /* Indispensable pour voir derrière */
-    pointer-events: none; 
+    background: transparent;
+    pointer-events: none; /* Laisse passer le regard sur les photos */
     z-index: 10;
 }
 
+/* 2. La barre de menu fixe */
 #navbar {
     display: flex;
     justify-content: space-between;
@@ -24,29 +26,23 @@ header {
     left: 0;
     width: 100%;
     height: 70px;
-    background: white; /* Seule cette petite barre sera blanche */
+    background: white;
     z-index: 1001;
     padding: 0 15px;
     box-sizing: border-box;
-    pointer-events: auto;
+    pointer-events: auto; /* Réactive le clic sur les boutons/burger */
 }
-#navbar .logo {
-    height: 45px !important;  /* Force la taille à 45px */
-    width: auto !important;
-    max-width: 120px !important;
-    display: block;
-}
-.nav-button {
-    text-decoration: none;
-    color: black;
-    border: 2px solid var(--bleu-turquoise);
-    padding: 6px 12px;
-    margin-left: 5px;       /* RÉDUIT : On passe de 10px à 5px pour gagner de la place */
-    font-weight: bold;
-    border-radius: 20px;
-    font-size: 0.85rem;     /* LÉGÈREMENT PLUS PETIT : Pour garantir que ça rentre */
-    white-space: nowrap;    /* INDISPENSABLE : Empêche le mot de se couper */
-    display: inline-block;  /* Force le bouton à garder sa forme */
+
+/* 3. LE CORRECTIF : Le diaporama remonte derrière le header */
+#slideshow-container { 
+    position: absolute; /* Fondamental pour ne pas être poussé vers le bas */
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100vh; 
+    overflow: hidden; 
+    background: black; 
+    z-index: 1; /* Tout au fond */
 }
 /* SLIDESHOW TECHNIQUE */
 #slideshow-container { position: relative; width: 100%; height: 100vh; overflow: hidden; background: black; }
