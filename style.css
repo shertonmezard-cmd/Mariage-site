@@ -17,7 +17,7 @@ body { font-family: 'Lato', sans-serif; margin: 0; text-align: center; color: va
     width: 100%;
     padding: 0 15px;      /* On enlève le padding haut/bas pour gagner de la place */
     background: white;
-    z-index: 1000;
+    z-index: 3000;
     box-sizing: border-box;
     flex-wrap: nowrap;    /* Interdit de passer à la ligne */
     height: 70px;         /* Barre plus fine et élégante */
@@ -197,18 +197,21 @@ footer .logo {  /* On précise bien que c'est celui du footer */
         font-family: 'Lato', sans-serif !important; /* Sécurité supplémentaire */
     }
     .nav-links {
-        display: none; /* On cache les boutons */
-        flex-direction: column;
-        position: absolute;
-        top: 100%; /* S'affiche juste sous la barre blanche */
-        left: 0;
-        width: 100%;
-        background: white;
-        padding: 20px 0;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-    }
+    display: none;
+    flex-direction: column;
+    position: fixed;   /* important */
+    top: 70px;         /* juste sous la navbar */
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 20px 0;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    z-index: 2500;     /* plus haut que le slideshow */
+}
 
-    .nav-links.active { display: flex; } /* S'affiche au clic */
+.nav-links.active {
+    display: flex;
+}
 
     .nav-button {
         margin: 10px auto;
