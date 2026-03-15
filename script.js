@@ -61,8 +61,9 @@ window.onclick = function(event) {
 const burgerMenu = document.getElementById('burger-menu');
 const navLinks = document.getElementById('nav-links');
 
-burgerMenu.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    // Optionnel : Animation des barres en X
-    burgerMenu.classList.toggle('toggle');
-});
+if (burgerMenu && navLinks) {
+    burgerMenu.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        burgerMenu.classList.toggle('toggle');
+    });
+}
