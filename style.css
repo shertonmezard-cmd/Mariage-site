@@ -396,3 +396,33 @@ pointer-events:none;
 opacity:0.25;
 z-index:7;
 }
+.photo-item{
+position:relative;
+}
+
+.photo-actions{
+position:absolute;
+bottom:10px;
+left:10px;
+right:10px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.like-button{
+background:rgba(0,0,0,0.6);
+color:white;
+padding:5px 10px;
+border-radius:20px;
+cursor:pointer;
+}
+
+.download-link{
+background:rgba(0,0,0,0.6);
+color:white;
+padding:5px 10px;
+border-radius:20px;
+text-decoration:none;
+}
