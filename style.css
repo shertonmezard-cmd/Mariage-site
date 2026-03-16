@@ -426,3 +426,20 @@ padding:5px 10px;
 border-radius:20px;
 text-decoration:none;
 }
+.like-button{
+cursor: pointer;
+font-size: 18px;
+transition: transform 0.2s ease;
+}
+
+.like-button:hover{
+transform: scale(1.2);
+}
+
+.like-count{
+font-weight: bold;
+margin-left: 5px;
+}
+.like-button:active{
+transform: scale(1.4);
+}
