@@ -234,7 +234,58 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
+import { getFirestore, doc, getDoc, setDoc, updateDoc, increment } 
+from "https://www.gstatic.com/firebasejs/12.10.0/firebase-firestore.js";
+
+const firebaseConfig = {
+apiKey: "AIzaSyC1ZO-O7KInMHJ3aWcTnenZ-9ZpouIdqq8",
+authDomain: "my-wedding-9891c.firebaseapp.com",
+projectId: "my-wedding-9891c",
+storageBucket: "my-wedding-9891c.firebasestorage.app",
+messagingSenderId: "916630984037",
+appId: "1:916630984037:web:6b4a149683045e9bacbd8c",
+measurementId: "G-VEJJ4H05QW"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+const likeButtons = document.querySelectorAll(".like-button");
+
+likeButtons.forEach((button, index) => {
+
+const count = button.querySelector(".like-count");
+const photoRef = doc(db, "likes", "photo"+index);
+
+getDoc(photoRef).then((docSnap) => {
+
+if(docSnap.exists()){
+count.innerText = docSnap.data().count;
+}else{
+setDoc(photoRef,{count:0});
+}
+
+});
+
+button.addEventListener("click", async () => {
+
+await updateDoc(photoRef,{
+count: increment(1)
+});
+
+const newSnap = await getDoc(photoRef);
+count.innerText = newSnap.data().count;
+
+});
+
+});
+
+</script>
+
 </body>
 </html>
 
