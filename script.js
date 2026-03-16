@@ -83,3 +83,20 @@ const revealSection = () => {
 
 window.addEventListener("scroll", revealSection);
 revealSection();
+const likeButtons = document.querySelectorAll(".like-button");
+
+likeButtons.forEach(button => {
+
+button.addEventListener("click", () => {
+
+const count = button.querySelector(".like-count");
+
+let likes = parseInt(count.innerText);
+
+likes++;
+
+count.innerText = likes;
+
+});
+
+});
