@@ -1,5 +1,5 @@
 // 1. CONFIGURATION DU COMPTE À REBOURS
-const weddingDate = new Date("2026-04-25T09:00:00-05:00").getTime();
+const weddingDate = new Date(2026, 3, 25, 9, 0, 0).getTime();
 
 const countdownFunction = setInterval(function() {
 
