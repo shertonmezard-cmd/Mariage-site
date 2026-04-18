@@ -1,5 +1,5 @@
 // 1. CONFIGURATION DU COMPTE À REBOURS
-const weddingDate = new Date("April 25, 2026 08:30:00").getTime();
+const weddingDate = new Date("2026-04-25T09:00:00-05:00").getTime();
 
 const countdownFunction = setInterval(function() {
 
@@ -17,9 +17,11 @@ document.getElementById("minutes").innerText = minutes;
 document.getElementById("seconds").innerText = seconds;
 
 if (distance < 0) {
-clearInterval(countdownFunction);
-}
+  clearInterval(countdownFunction);
 
+  document.querySelector(".countdown-container").innerHTML = 
+  "<h2>💍 C'est le grand jour !</h2>";
+}
 }, 1000);
 
 // 2. LOGIQUE DU DIAPORAMA (Pour tes 3 photos)
